@@ -1,8 +1,21 @@
 import { createPlugin } from '@bluebase/core';
 
+import { components } from './components';
+import { defaultConfigs } from './configs';
+import { VERSION } from './version';
+
 export default createPlugin({
-	description: '<%= PROJECT_DESCRIPTION %>',
-	key: '<%= PROJECT_NAME %>',
-	name: '<%= PROJECT_TITLE %>',
-	version: '1.0.0',
+	key: 'settings',
+	name: 'Settings',
+	description: 'A settings app for the BlueBase framework!',
+	version: VERSION,
+
+	icon: {
+		component: 'MyPluginIcon',
+		type: 'component',
+	},
+
+	defaultConfigs,
+
+	components,
 });
