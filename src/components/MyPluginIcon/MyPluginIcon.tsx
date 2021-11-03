@@ -1,5 +1,5 @@
 import { DynamicIcon, View } from '@bluebase/components';
-import { Theme } from '@bluebase/core';
+import { useStyles } from '@bluebase/core';
 import React from 'react';
 import { TextStyle, ViewStyle } from 'react-native';
 
@@ -13,29 +13,31 @@ export interface MyPluginIconProps {
 	styles?: Partial<MyPluginIconStyles>;
 }
 
-export const MyPluginIcon = ({ size, styles: _styles }: MyPluginIconProps) => {
-	const styles = _styles as MyPluginIconStyles;
+export const MyPluginIcon = (props: MyPluginIconProps) => {
+	const { size, styles: _styles } = props;
+
+	const styles: MyPluginIconStyles = useStyles('MyPluginIcon', props, {
+		iconColor: {
+			color: '#fff',
+		},
+		root: {
+			alignItems: 'center',
+			backgroundColor: '#C62828',
+			borderRadius: 10,
+			justifyContent: 'center',
+			height: size,
+			width: size,
+		},
+	});
 
 	return (
-		<View style={[styles.root, { height: size, width: size }]}>
+		<View style={styles.root}>
 			<DynamicIcon
 				type="icon"
-				name="lightbulb-outline"
+				name="rocket"
 				color={styles.iconColor.color}
 				size={size * 0.75}
 			/>
 		</View>
 	);
 };
-
-MyPluginIcon.defaultStyles = (_theme: Theme) => ({
-	iconColor: {
-		color: '#fff',
-	},
-	root: {
-		alignItems: 'center',
-		backgroundColor: '#3D5AFE',
-		borderRadius: 10,
-		justifyContent: 'center',
-	},
-});
