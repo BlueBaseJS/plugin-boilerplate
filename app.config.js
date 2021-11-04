@@ -1,7 +1,9 @@
+import { VERSION, VERSION_NUMBER } from './src/version';
+
 export default {
 	name: 'my-app',
 	slug: 'my-app',
-	version: '1.0.0',
+	version: VERSION,
 	orientation: 'portrait',
 	icon: './assets/icon.png',
 	entryPoint: './node_modules/expo/AppEntry.js',
@@ -20,6 +22,7 @@ export default {
 		supportsTablet: true
 	},
 	android: {
+		versionCode: VERSION_NUMBER,
 		adaptiveIcon: {
 			foregroundImage: './assets/adaptive-icon.png',
 			backgroundColor: '#FFFFFF'
