@@ -1,4 +1,13 @@
-import { VERSION, VERSION_NUMBER } from './src/version';
+let VERSION = '1.0.0', VERSION_NUMBER = 100000000;
+
+try {
+	const data = require('./dist/version');
+
+	VERSION = data.VERSION;
+	VERSION_NUMBER = data.VERSION_NUMBER;
+} catch (e) {
+	//
+}
 
 export default {
 	name: 'my-app',
