@@ -7,9 +7,9 @@ import { screens } from './screens';
 import { VERSION } from './version';
 
 export default createPlugin({
-	key: 'my-plugin',
-	name: 'My Plugin',
-	description: 'A plugin boilerplate for the BlueBase framework!',
+	key: 'plugin-boilerplate',
+	name: 'BlueBase Boilerplate',
+	description: '🍛 A boilerplate to create BlueBase plugins or apps',
 	version: VERSION,
 
 	icon: {

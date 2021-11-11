@@ -1,0 +1,95 @@
+const replace = require('replace-in-file');
+const readline = require('readline');
+
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+async function input(prompt) {
+	console.log(prompt);
+	return (await rl[Symbol.asyncIterator]().next()).value;
+}
+
+async function main() {
+	console.log('Welcome to BlueBase plugin boilerplate!');
+	console.log('Please answer the following questions to complete the setup:');
+
+	let name = await input('Name: (Example: "My App") ');
+
+	if (!name) {
+		name = 'My App';
+	}
+
+	let slug = await input('Slug: (Example: "my-app") ');
+
+	if (!slug) {
+		slug = 'my-app';
+	}
+
+	let description = await input('Description: ');
+
+	if (!description) {
+		description = '';
+	}
+
+	const githubOrg = await input('GitHub User or Organization: (Example: "BlueBaseJs") ');
+	const githubRepo = await input('GitHub Repo: ');
+
+	try {
+		// name
+		replace.sync({
+			files: ['app.config.js', './src/index.ts'],
+			from: /["']?name["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `name: '${name}'`,
+		});
+
+		// slug
+		replace.sync({
+			files: ['app.config.js'],
+			from: /["']?slug["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `slug: '${slug}'`,
+		});
+		replace.sync({
+			files: ['./src/index.ts'],
+			from: /["']?key["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `key: '${slug}'`,
+		});
+		replace.sync({
+			files: ['package.json'],
+			from: /["']?name["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `"name": "${slug}"`,
+		});
+
+		// description
+		replace.sync({
+			files: ['app.config.js', './src/index.ts'],
+			from: /["']?description["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `description: '${description}'`,
+		});
+		replace.sync({
+			files: ['package.json'],
+			from: /["']?description["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `"description": "${description}"`,
+		});
+
+		// repository
+		replace.sync({
+			files: ['app.config.js'],
+			from: /["']?githubUrl["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `githubUrl: 'https://github.com/${githubOrg}/${githubRepo}'`,
+		});
+		replace.sync({
+			files: ['package.json'],
+			from: /["']?repository["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
+			to: `"repository": "github:${githubOrg}/${githubRepo}"`,
+		});
+	}
+	catch (error) {
+		console.error('Error occurred:', error);
+	}
+
+	rl.close();
+}
+
+main();
