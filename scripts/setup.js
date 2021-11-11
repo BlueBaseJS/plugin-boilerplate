@@ -1,3 +1,5 @@
+require('colors');
+
 const replace = require('replace-in-file');
 const readline = require('readline');
 
@@ -12,29 +14,38 @@ async function input(prompt) {
 }
 
 async function main() {
-	console.log('Welcome to BlueBase plugin boilerplate!');
-	console.log('Please answer the following questions to complete the setup:');
+	console.log('Welcome to BlueBase plugin boilerplate!'.underline.bold.green);
+	console.log('Please answer the following questions to complete the setup:'.blue);
 
 	let name = await input('Name: (Example: "My App") ');
 
 	if (!name) {
-		name = 'My App';
+		name = 'BlueBase Boilerplate';
 	}
 
 	let slug = await input('Slug: (Example: "my-app") ');
 
 	if (!slug) {
-		slug = 'my-app';
+		slug = 'plugin-boilerplate';
 	}
 
 	let description = await input('Description: ');
 
 	if (!description) {
-		description = '';
+		description = '🍛 A boilerplate to create BlueBase plugins or apps';
 	}
 
-	const githubOrg = await input('GitHub User or Organization: (Example: "BlueBaseJs") ');
-	const githubRepo = await input('GitHub Repo: ');
+	let githubOrg = await input('GitHub User or Organization: (Example: "BlueBaseJS") ');
+
+	if (!githubOrg) {
+		githubOrg = 'BlueBaseJS';
+	}
+
+	let githubRepo = await input('GitHub Repo: ');
+
+	if (!githubRepo) {
+		githubRepo = 'plugin-boilerplate';
+	}
 
 	try {
 		// name
