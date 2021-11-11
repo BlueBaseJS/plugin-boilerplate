@@ -54,6 +54,11 @@ async function main() {
 			from: /["']?name["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
 			to: `name: '${name}'`,
 		});
+		replace.sync({
+			files: ['README.md'],
+			from: '<%= PROJECT_TITLE %>',
+			to: name,
+		});
 
 		// slug
 		replace.sync({
@@ -83,6 +88,11 @@ async function main() {
 			from: /["']?description["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
 			to: `"description": "${description}"`,
 		});
+		replace.sync({
+			files: ['README.md'],
+			from: '<%= PROJECT_DESCRIPTION %>',
+			to: description,
+		});
 
 		// repository
 		replace.sync({
@@ -94,6 +104,16 @@ async function main() {
 			files: ['package.json'],
 			from: /["']?repository["']?: (["'])(?:(?=(\\?))\2.)*?\1/g,
 			to: `"repository": "github:${githubOrg}/${githubRepo}"`,
+		});
+		replace.sync({
+			files: ['README.md'],
+			from: '<%= GIT_ORG %>',
+			to: githubOrg,
+		});
+		replace.sync({
+			files: ['README.md'],
+			from: '<%= GIT_REPO %>',
+			to: githubRepo,
 		});
 	}
 	catch (error) {
