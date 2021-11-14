@@ -41,3 +41,7 @@ export const MyPluginIcon = (props: MyPluginIconProps) => {
 		</View>
 	);
 };
+
+MyPluginIcon.defaultProps = {
+	size: 100,
+};
