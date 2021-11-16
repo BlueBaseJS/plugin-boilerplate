@@ -2,6 +2,13 @@ require('colors');
 
 const replace = require('replace-in-file');
 const readline = require('readline');
+const fs = require('fs');
+
+try {
+	fs.renameSync('._github', '.github');
+} catch (err) {
+	// ignore
+}
 
 const rl = readline.createInterface({
 	input: process.stdin,
