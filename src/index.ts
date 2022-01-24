@@ -1,29 +1,20 @@
-import { createPlugin } from '@bluebase/core';
-
-import { components } from './components';
-import { defaultConfigs } from './configs';
-import { routes } from './routes';
-import { screens } from './screens';
 import { VERSION } from './version';
+import { components } from './components';
+import { createPlugin } from '@bluebase/core';
+import { lang } from './lang';
+
+export * from './components/exports';
+export * from './types';
 
 export default createPlugin({
-	key: 'plugin-boilerplate',
-	name: 'BlueBase Boilerplate',
-	description: '🍛 A boilerplate to create BlueBase plugins or apps',
+	description: 'The plugin provides common UI across Mevris Apps.',
+	key: 'client-plugin-location-ui',
+	name: 'Mevris UI',
 	version: VERSION,
 
-	icon: {
-		component: 'MyPluginIcon',
-		type: 'component',
-	},
+	components,
 
-	routes,
-	indexRoute: 'MyPluginHome',
-
-	defaultConfigs,
-
-	components: {
-		...components,
-		...screens,
+	filters: {
+		...lang,
 	},
 });

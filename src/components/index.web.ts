@@ -1,3 +1,8 @@
 export const components = {
-	MyPluginIcon: import('./MyPluginIcon'),
+	AvatarMarker: import('./AvatarMarker'),
+	LocationDisplayView: import('./LocationDisplayView'),
+	LocationInputDialog: import('./LocationInputDialog'),
+	LocationInputView: import('./LocationInputView'),
+	LocationMapView: import('./LocationMapView'),
+	Pulse: import('./Pulse'),
 };
