@@ -1,4 +1,5 @@
 import { BlueBase } from '@bluebase/core';
+
 import Plugin from '../index';
 
 /**

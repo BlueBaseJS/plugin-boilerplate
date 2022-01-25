@@ -1,12 +1,11 @@
-import * as Animatable from 'react-native-animatable';
-
+import { View } from '@bluebase/components';
+import { getComponent, Theme, useStyles } from '@bluebase/core';
 import React, { useRef } from 'react';
-import { Theme, getComponent, useStyles } from '@bluebase/core';
+import { ViewStyle } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 import { AvatarMarkerProps } from '../AvatarMarker';
 import { PulseProps } from '../Pulse';
-import { View } from '@bluebase/components';
-import { ViewStyle } from 'react-native';
 
 export interface LocationMapStyles {
 	root: ViewStyle;

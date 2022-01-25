@@ -1,15 +1,15 @@
 import { BlueBaseApp, getComponent } from '@bluebase/core';
-
 import BBPluginJsonForm from '@bluebase/plugin-json-schema-components';
 import BBPluginMaterialUI from '@bluebase/plugin-material-ui';
 import BlueeastClientPluginPermissionUi from '@blueeast/client-plugin-permissions-ui';
-// import { FormikContext } from 'formik';
-import Plugin from '../../../index';
+import { mount } from 'enzyme';
+import { waitForElement } from 'enzyme-async-helpers';
 import React from 'react';
 import { View } from 'react-native';
-import { mount } from 'enzyme';
 import wait from 'waait';
-import { waitForElement } from 'enzyme-async-helpers';
+
+// import { FormikContext } from 'formik';
+import Plugin from '../../../index';
 
 /**
  * Mocking expo Library

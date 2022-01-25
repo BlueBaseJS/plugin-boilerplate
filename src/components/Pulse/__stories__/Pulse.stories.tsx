@@ -1,7 +1,8 @@
-import { PulseProps } from '../Pulse';
-import React from 'react';
 import { getComponent } from '@bluebase/core';
 import storiesOf from '@bluebase/storybook-addon';
+import React from 'react';
+
+import { PulseProps } from '../Pulse';
 
 const Pulse = getComponent<PulseProps>('Pulse');
 

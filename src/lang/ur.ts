@@ -33,12 +33,12 @@ export const ur = (messages: IntlMessages) => ({
 	'Looks like we do not have permission to access this resource.':
 		'ایسا لگتا ہے کہ ہمارے پاس اس وسائل تک رسائی کی اجازت نہیں ہے۔',
 	'Looks like we do not have permission to access your camera. It is ok! We are not offended, but make it right, ok?':
-		`ایسا لگتا ہے کہ ہمارے پاس آپ کے کیمرا تک رسائی کی اجازت نہیں ہے۔` +
-		`ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟`,
+		'ایسا لگتا ہے کہ ہمارے پاس آپ کے کیمرا تک رسائی کی اجازت نہیں ہے۔' +
+		'ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟',
 	// eslint-disable-next-line max-len
 	'Looks like we do not have permission to access your location. It is ok! We are not offended, but make it right, ok?':
-		`ایسا لگتا ہے کہ ہمارے پاس آپ کے مقام تک رسائی کی اجازت نہیں ہے۔` +
-		`ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟`,
+		'ایسا لگتا ہے کہ ہمارے پاس آپ کے مقام تک رسائی کی اجازت نہیں ہے۔' +
+		'ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟',
 
 	'Network Error': 'نیٹ ورک کی خرابی۔',
 	Permission: 'اجازت۔',

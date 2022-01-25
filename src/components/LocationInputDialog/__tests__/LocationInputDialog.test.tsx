@@ -1,11 +1,11 @@
 import { BlueBaseApp, getComponent } from '@bluebase/core';
-
 import JsonFormPlugin from '@bluebase/plugin-json-schema-components';
 import MUIplugin from '@bluebase/plugin-material-ui';
-import Plugin from '../../../index';
-import React from 'react';
 import { mount } from 'enzyme';
 import { waitForElement } from 'enzyme-async-helpers';
+import React from 'react';
+
+import Plugin from '../../../index';
 
 const LocationInputDialog = getComponent('LocationInputDialog');
 /**
@@ -18,7 +18,7 @@ describe('LocationInputDialog', () => {
 	test('should show a dialog', async () => {
 		const wrapper = mount(
 			<BlueBaseApp plugins={[Plugin, MUIplugin, JsonFormPlugin]}>
-				<LocationInputDialog visible={true} />
+				<LocationInputDialog visible />
 			</BlueBaseApp>
 		);
 
@@ -31,7 +31,7 @@ describe('LocationInputDialog', () => {
 		const onSubmit = jest.fn();
 		const wrapper = mount(
 			<BlueBaseApp plugins={[Plugin, MUIplugin, JsonFormPlugin]}>
-				<LocationInputDialog visible={true} onSubmit={onSubmit} />
+				<LocationInputDialog visible onSubmit={onSubmit} />
 			</BlueBaseApp>
 		);
 

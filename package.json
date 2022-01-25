@@ -49,7 +49,9 @@
     "build-storybook": "node ./node_modules/@storybook/react/bin/build.js"
   },
   "dependencies": {
-    "@bluebase/components": "^6.4.0"
+    "@bluebase/components": "^6.4.0",
+    "@blueeast/client-plugin-permissions-ui": "^4.0.7",
+    "waait": "^1.0.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",

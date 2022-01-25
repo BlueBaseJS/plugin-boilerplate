@@ -1,12 +1,12 @@
 import { BlueBaseApp, createPlugin, getComponent } from '@bluebase/core';
-
-import { LocationDisplayViewProps } from '../LocationDisplayView';
 import MUIplugin from '@bluebase/plugin-material-ui';
-import Plugin from '../../../index';
-import React from 'react';
-import { View } from 'react-native';
 import { mount } from 'enzyme';
 import { waitForElement } from 'enzyme-async-helpers';
+import React from 'react';
+import { View } from 'react-native';
+
+import Plugin from '../../../index';
+import { LocationDisplayViewProps } from '../LocationDisplayView';
 
 /**
  * Mocking expo Library

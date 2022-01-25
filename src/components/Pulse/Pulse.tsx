@@ -1,9 +1,7 @@
-import * as Animatable from 'react-native-animatable';
-
 import { Theme, useStyles } from '@bluebase/core';
-
 import React from 'react';
 import { ViewStyle } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 const pulsate = {
 	0: {

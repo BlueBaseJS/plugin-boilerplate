@@ -1,9 +1,10 @@
 import { Dialog } from '@bluebase/components';
-import { FormikHelpers } from 'formik';
-import { JsonFormProps } from '@bluebase/plugin-json-schema-components';
-import { LocationCoordinates } from '../../types';
-import React from 'react';
 import { getComponent } from '@bluebase/core';
+import { JsonFormProps } from '@bluebase/plugin-json-schema-components';
+import { FormikHelpers } from 'formik';
+import React from 'react';
+
+import { LocationCoordinates } from '../../types';
 
 const JsonForm = getComponent<JsonFormProps<LocationCoordinates>>('JsonForm');
 

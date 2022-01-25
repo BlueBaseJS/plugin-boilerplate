@@ -1,6 +1,5 @@
 import { Avatar, AvatarProps, View } from '@bluebase/components';
 import { Theme, useStyles } from '@bluebase/core';
-
 import React from 'react';
 import { ViewStyle } from 'react-native';
 

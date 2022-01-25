@@ -1,10 +1,10 @@
 import { Divider, List, View } from '@bluebase/components';
 import { Theme, useStyles } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
 
 import { AvatarMarkerProps } from '../AvatarMarker';
 import { LocationMapView } from '../LocationMapView';
-import React from 'react';
-import { ViewStyle } from 'react-native';
 
 export interface LocationDisplayViewStyles {
 	root: ViewStyle;

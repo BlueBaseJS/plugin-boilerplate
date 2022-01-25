@@ -1,7 +1,8 @@
-import { AvatarMarkerProps } from '../AvatarMarker';
-import React from 'react';
 import { getComponent } from '@bluebase/core';
 import storiesOf from '@bluebase/storybook-addon';
+import React from 'react';
+
+import { AvatarMarkerProps } from '../AvatarMarker';
 
 const AvatarMarker = getComponent<AvatarMarkerProps>('AvatarMarker');
 

@@ -1,12 +1,12 @@
 import { BlueBaseApp, createPlugin, getComponent } from '@bluebase/core';
-
-import { LocationMapViewProps } from '../LocationMapView';
 import MUIplugin from '@bluebase/plugin-material-ui';
-import Plugin from '../../../index';
-import React from 'react';
-import { View } from 'react-native';
 import { mount } from 'enzyme';
 import { waitForElement } from 'enzyme-async-helpers';
+import React from 'react';
+import { View } from 'react-native';
+
+import Plugin from '../../../index';
+import { LocationMapViewProps } from '../LocationMapView';
 
 /**
  * Mocking expo Library
@@ -52,7 +52,7 @@ describe('LocationAskPermissionView', () => {
 
 		const wrapper = mount(
 			<BlueBaseApp plugins={[Plugin, MUIplugin, MockPlugin]}>
-				<LocationMapView latitude={latitude} longitude={longitude} pulse={true} />
+				<LocationMapView latitude={latitude} longitude={longitude} pulse />
 			</BlueBaseApp>
 		);
 

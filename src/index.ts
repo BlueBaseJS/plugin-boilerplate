@@ -1,7 +1,8 @@
-import { VERSION } from './version';
-import { components } from './components';
 import { createPlugin } from '@bluebase/core';
+
+import { components } from './components';
 import { lang } from './lang';
+import { VERSION } from './version';
 
 export * from './components/exports';
 export * from './types';

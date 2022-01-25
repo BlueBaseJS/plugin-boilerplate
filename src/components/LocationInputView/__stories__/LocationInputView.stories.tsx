@@ -1,7 +1,7 @@
-import React from 'react';
 import { View } from '@bluebase/components';
 import { getComponent } from '@bluebase/core';
 import storiesOf from '@bluebase/storybook-addon';
+import React from 'react';
 
 const LocationInputView = getComponent('LocationInputView');
 const stories = storiesOf('LocationInputView', module);

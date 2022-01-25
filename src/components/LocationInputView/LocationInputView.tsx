@@ -1,14 +1,21 @@
+import {
+	Button,
+	Card,
+	Divider,
+	IconButton,
+	List,
+	SafeAreaView,
+	View
+} from '@bluebase/components';
+import { getComponent, useIntl, useStyles } from '@bluebase/core';
+import React, { useCallback, useRef, useState } from 'react';
+import { ViewStyle } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-import { Button, Card, Divider, IconButton, List, SafeAreaView, View } from '@bluebase/components';
-import React, { useCallback, useRef, useState } from 'react';
-import { getComponent, useIntl, useStyles } from '@bluebase/core';
-
+import { LocationObject } from '../../types';
 import { AvatarMarkerProps } from '../AvatarMarker';
 import { LocationInputDialogProps } from '../LocationInputDialog';
-import { LocationObject } from '../../types';
 import { PulseProps } from '../Pulse';
-import { ViewStyle } from 'react-native';
 
 const AvatarMarker = getComponent<AvatarMarkerProps>('AvatarMarker');
 const LocationInputDialog = getComponent<LocationInputDialogProps>('LocationInputDialog');
