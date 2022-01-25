@@ -1,8 +1,8 @@
 export const components = {
-	AvatarMarker: import('./AvatarMarker'),
-	LocationDisplayView: import('./LocationDisplayView'),
-	LocationInputDialog: import('./LocationInputDialog'),
-	LocationInputView: import('./LocationInputView'),
-	LocationMapView: import('./LocationMapView'),
-	Pulse: import('./Pulse'),
+	CameraPermission: import('./CameraPermission'),
+	CameraPermissionDeniedView: import('./CameraPermissionDeniedView'),
+	CameraRollPermission: import('./CameraRollPermission'),
+	LocateMeButton: import('./LocateMeButton'),
+	LocationPermission: import('./LocationPermission'),
+	Permission: import('./Permission'),
 };

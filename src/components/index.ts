@@ -1,14 +1,20 @@
-import { AvatarMarker } from './AvatarMarker';
-import { LocationDisplayView } from './LocationDisplayView';
-import { LocationInputDialog } from './LocationInputDialog';
-import { LocationInputView } from './LocationInputView';
-import { LocationMapView } from './LocationMapView';
-import { Pulse } from './Pulse';
+// import { Alert } from './Alert';
+import { CameraPermission } from './CameraPermission';
+import { CameraPermissionAskView } from './CameraPermissionAskView';
+import { CameraPermissionDeniedView } from './CameraPermissionDeniedView';
+import { CameraRollPermission } from './CameraRollPermission';
+import { LocateMeButton } from './LocateMeButton';
+import { LocationPermission } from './LocationPermission';
+import { Permission } from './Permission';
+// import { ImagePicker } from './ImagePicker';
+
 export const components = {
-	AvatarMarker,
-	LocationDisplayView,
-	LocationInputDialog,
-	LocationInputView,
-	LocationMapView,
-	Pulse,
+	// Alert,
+	CameraPermissionAskView,
+	CameraPermission,
+	CameraPermissionDeniedView,
+	CameraRollPermission,
+	LocateMeButton,
+	LocationPermission,
+	Permission,
 };

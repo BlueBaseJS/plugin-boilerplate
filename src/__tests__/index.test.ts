@@ -12,5 +12,5 @@ test('Plugin should be correctly registered', async () => {
 	const BB = new BlueBase();
 	await BB.Plugins.register(Plugin);
 	require('../version');
-	expect(BB.Plugins.has('client-plugin-location-ui')).toBeTruthy();
+	expect(BB.Plugins.has('client-plugin-permissions-ui')).toBeTruthy();
 });

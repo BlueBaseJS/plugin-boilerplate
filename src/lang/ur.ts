@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import { IntlMessages } from '@bluebase/core';
 
 export const ur = (messages: IntlMessages) => ({
 	...messages,
 	Allow: 'اجازت دیں',
 
-	// eslint-disable-next-line max-len
+	// tslint:disable-next-line: max-line-length
 	'A network error occurred.This may be because of your network connection, or a server error.Please try again later.': `ایک نیٹ ورک میں خامی پیش آگئی۔ یہ آپ کے نیٹ ورک کنکشن ، یا سرور کی خرابی کی وجہ سے ہوسکتی ہے۔
 براہ کرم کچھ دیر بعد کوشش کریں.`,
 	Camera: 'کیمرہ۔',
@@ -35,7 +36,6 @@ export const ur = (messages: IntlMessages) => ({
 	'Looks like we do not have permission to access your camera. It is ok! We are not offended, but make it right, ok?':
 		`ایسا لگتا ہے کہ ہمارے پاس آپ کے کیمرا تک رسائی کی اجازت نہیں ہے۔` +
 		`ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟`,
-	// eslint-disable-next-line max-len
 	'Looks like we do not have permission to access your location. It is ok! We are not offended, but make it right, ok?':
 		`ایسا لگتا ہے کہ ہمارے پاس آپ کے مقام تک رسائی کی اجازت نہیں ہے۔` +
 		`ٹھیک ہے! ہم ناراض نہیں ہیں ، لیکن اسے ٹھیک کردیں ، ٹھیک ہے؟`,
