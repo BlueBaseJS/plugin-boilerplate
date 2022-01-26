@@ -4,7 +4,7 @@ import { MockedProvider } from '@apollo/react-testing';
 import { OrderList } from '../OrderList';
 import { OrderListQueryMocks } from '../../../graphql/mocks';
 import React from 'react';
-import bootOptions from '../../../../bluebase/common/bluebase';
+import bootOptions from '../../../../boot';
 import storiesOf from '@bluebase/storybook-addon';
 
 storiesOf('OrderList', module)

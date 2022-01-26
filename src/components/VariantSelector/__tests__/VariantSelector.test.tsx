@@ -1,7 +1,7 @@
 import { BlueBase, BlueBaseApp, getComponent } from '@bluebase/core';
 
 import { AvatarVariantSelectorItemProps } from '../../AvatarVariantSelectorItem';
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import React from 'react';
 import { VariantSelectorProps } from '../VariantSelector';
 import { mount } from 'enzyme';

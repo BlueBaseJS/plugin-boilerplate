@@ -1,6 +1,6 @@
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { Link } from '@bluebase/components';
 import { LinkChildrenIfPossible } from '../LinkChildrenIfPossible';
 import React from 'react';

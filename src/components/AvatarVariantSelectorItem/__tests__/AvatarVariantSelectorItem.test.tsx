@@ -1,7 +1,7 @@
 import { BlueBase, BlueBaseApp, getComponent, isMobile } from '@bluebase/core';
 
 import { AvatarVariantSelectorItemProps } from '../AvatarVariantSelectorItem';
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import React from 'react';
 import { mount } from 'enzyme';
 import { waitForElement } from 'enzyme-async-helpers';

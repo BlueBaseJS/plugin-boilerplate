@@ -1,5 +1,5 @@
 import { BlueBaseApp } from '@bluebase/core';
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import React from 'react';
 import { Text } from 'react-native';
 import { VariantSelectorItemProps } from '../VariantSelector';

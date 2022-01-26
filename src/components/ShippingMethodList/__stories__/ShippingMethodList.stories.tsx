@@ -4,7 +4,7 @@ import { MockedProvider } from '@apollo/react-testing';
 import React from 'react';
 import { ShippingMethodList } from '../ShippingMethodList';
 import { ShippingMethodListQueryMocks } from '../../../graphql/mocks';
-import bootOptions from '../../../../bluebase/common/bluebase';
+import bootOptions from '../../../../boot';
 import storiesOf from '@bluebase/storybook-addon';
 
 storiesOf('ShippingMethodList', module)

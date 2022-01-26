@@ -1,7 +1,7 @@
 import { BlueBase, BlueBaseApp, getComponent } from '@bluebase/core';
 import { Placeholder, PlaceholderMedia } from 'rn-placeholder';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { ComponentState } from '@bluebase/components';
 import { MediaSliderProps } from '../MediaSlider';
 import { MediaType } from '../../Media/Media';

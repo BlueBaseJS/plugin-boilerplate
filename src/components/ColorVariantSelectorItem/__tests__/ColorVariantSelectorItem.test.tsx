@@ -1,6 +1,6 @@
 import { BlueBaseApp, getComponent, isMobile } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { ColorVariantSelectorItemProps } from '../ColorVariantSelectorItem';
 import React from 'react';
 import { mount } from 'enzyme';

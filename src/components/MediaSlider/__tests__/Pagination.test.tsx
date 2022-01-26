@@ -1,6 +1,6 @@
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { Pagination } from '../Pagination';
 import React from 'react';
 import { mount } from 'enzyme';

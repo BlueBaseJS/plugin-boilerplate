@@ -1,6 +1,6 @@
 import { BlueBase, BlueBaseApp, getComponent } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 // import { ComponentState } from '@bluebase/components';
 import { HeroSliderProps } from '../HeroSlider';
 import { MediaType } from '../../Media/Media';

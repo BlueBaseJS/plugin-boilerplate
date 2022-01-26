@@ -1,6 +1,6 @@
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/common/bluebase';
+import BootOptions from '../../../../boot';
 import { MultiLevelSelectorList } from '../List';
 import React from 'react';
 import storiesOf from '@bluebase/storybook-addon';

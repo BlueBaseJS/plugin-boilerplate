@@ -1,6 +1,6 @@
 import { BlueBase, BlueBaseApp, buildTheme, getComponent } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { Card } from '@bluebase/components';
 import { MediaSliderProps } from '../MediaSlider';
 import { MediaType } from '../../Media/Media';

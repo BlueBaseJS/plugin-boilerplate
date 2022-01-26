@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 import { BlueBase, BlueBaseApp, getComponent } from '@bluebase/core';
 
-import BootOptions from '../../../../bluebase/storybook/bluebase';
+import BootOptions from '../../../../boot';
 import { CityPickerProps } from '../CityPicker';
 import React from 'react';
 import { areas } from '../__stories__/areas';

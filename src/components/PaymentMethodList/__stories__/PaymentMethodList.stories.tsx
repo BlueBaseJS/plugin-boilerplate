@@ -4,7 +4,7 @@ import { MockedProvider } from '@apollo/react-testing';
 import { PaymentMethodList } from '../PaymentMethodList';
 import { PaymentMethodListQueryMocks } from '../../../graphql/mocks';
 import React from 'react';
-import bootOptions from '../../../../bluebase/common/bluebase';
+import bootOptions from '../../../../boot';
 import storiesOf from '@bluebase/storybook-addon';
 
 storiesOf('PaymentMethodList', module)
