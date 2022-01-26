@@ -1,29 +1,24 @@
-import { createPlugin } from '@bluebase/core';
-
-import { components } from './components';
-import { defaultConfigs } from './configs';
-import { routes } from './routes';
-import { screens } from './screens';
 import { VERSION } from './version';
+import { components } from './components';
+import { createPlugin } from '@bluebase/core';
+import { lang } from './lang';
+
+export * from './exports';
 
 export default createPlugin({
-	key: 'plugin-boilerplate',
-	name: 'BlueBase Boilerplate',
-	description: '🍛 A boilerplate to create BlueBase plugins or apps',
+	description: 'Commi Components',
+	key: '@commi/commi-client-plugin-ui',
+	name: 'Commi Client Plugin UI',
 	version: VERSION,
 
-	icon: {
-		component: 'MyPluginIcon',
-		type: 'component',
+	assets: {
+		AppleAppStoreBadge: require('../assets/common/apple-app-store-badge.png'),
+		GooglePlayStoreBadge: require('../assets/common/google-play-badge.png'),
 	},
 
-	routes,
-	indexRoute: 'MyPluginHome',
+	components,
 
-	defaultConfigs,
-
-	components: {
-		...components,
-		...screens,
+	filters: {
+		...lang,
 	},
 });
