@@ -10,8 +10,8 @@ try {
 }
 
 export default {
-	name: 'BlueBase Boilerplate',
-	slug: 'plugin-boilerplate',
+	name: 'commi-client-plugin-ui',
+	slug: 'commi-client-plugin-ui',
 	description: '🍛 A boilerplate to create BlueBase plugins or apps',
 	version: VERSION,
 	githubUrl: 'https://github.com/BlueBaseJS/plugin-boilerplate',

@@ -3,20 +3,17 @@ import { components } from './components';
 import { createPlugin } from '@bluebase/core';
 import { lang } from './lang';
 
-export * from './components/exports';
-export * from './hooks';
+export * from './exports';
 
 export default createPlugin({
-	description: 'The plugin provides common permissions UI across Mevris Apps.',
-	key: 'client-plugin-permissions-ui',
-	name: 'Mevris UI',
+	description: '🍛 A boilerplate to create BlueBase plugins or apps',
+	key: 'commi-client-plugin-ui',
+	name: 'commi-client-plugin-ui',
 	version: VERSION,
 
 	assets: {
-		// CameraAskPermissionViewImage: require('../assets/common/location-permission.png'),
-		// CameraPermissionDeniedViewImage: require('../assets/common/location-permission.png'),
-		// LocationAskPermissionViewImage: require('../assets/common/location-permission.png'),
-		// LocationPermissionDeniedViewImage: require('../assets/common/location-permission.png'),
+		AppleAppStoreBadge: require('../assets/common/apple-app-store-badge.png'),
+		GooglePlayStoreBadge: require('../assets/common/google-play-badge.png'),
 	},
 
 	components,
