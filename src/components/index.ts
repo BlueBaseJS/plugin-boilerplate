@@ -1,5 +1,7 @@
-import { MyPluginIcon } from './MyPluginIcon';
+import { AppIcon } from './AppIcon';
+import { SensorsList } from './SensorsList';
 
 export const components = {
-	MyPluginIcon,
+	SensorsList,
+	ThingsAppIcon: AppIcon,
 };

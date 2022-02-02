@@ -1,3 +1,4 @@
 export const components = {
-	MyPluginIcon: import('./MyPluginIcon'),
+	SensorsList: import('./SensorsList'),
+	ThingsAppIcon: import('./AppIcon'),
 };

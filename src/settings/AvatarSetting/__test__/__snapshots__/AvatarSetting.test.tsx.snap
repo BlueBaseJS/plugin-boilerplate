@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Setting Avatar Setting 1`] = `"<rncappearanceprovider style=\\"flex: 1;\\"><view style=\\"flex: 1;\\"><view style=\\"align-items: center; flex-grow: 1; justify-content: center; padding: 16px;\\"><text>TypeError</text><text>client_plugin_permissions_ui_1.usePermissions is not a function or its return value is not iterable</text></view></view></rncappearanceprovider>"`;
+
+exports[`Avatar Setting Avatar Setting 2`] = `"<rncappearanceprovider style=\\"flex: 1;\\"><view style=\\"flex: 1;\\"><view style=\\"align-items: center; flex-grow: 1; justify-content: center; padding: 16px;\\"><text>TypeError</text><text>client_plugin_permissions_ui_1.usePermissions is not a function or its return value is not iterable</text></view></view></rncappearanceprovider>"`;

@@ -10,8 +10,8 @@ try {
 }
 
 export default {
-	name: 'BlueBase Boilerplate',
-	slug: 'plugin-boilerplate',
+	name: 'mevris-client-app-things',
+	slug: 'mevris-client-app-things',
 	description: '🍛 A boilerplate to create BlueBase plugins or apps',
 	version: VERSION,
 	githubUrl: 'https://github.com/BlueBaseJS/plugin-boilerplate',

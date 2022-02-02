@@ -1,5 +1,6 @@
-// added latest fixes
-test('Plugin should load translations from web', async () => {
+import { isPromise } from '@bluebase/core';
+
+test('should load components on web', async () => {
 	const { components } = require('../components/index.web');
-	expect(components.MyPluginIcon).toBeDefined();
+	expect(isPromise(components.SensorsList)).toBe(true);
 });
