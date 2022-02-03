@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 // tslint:disable: max-line-length
 
-import { FetchMoreOptions } from 'apollo-client';
+import { FetchMoreOptions } from '@apollo/client';
 import { getUpdateQuery } from '../getUpdateQuery';
 
 describe('GraphqlList', () => {

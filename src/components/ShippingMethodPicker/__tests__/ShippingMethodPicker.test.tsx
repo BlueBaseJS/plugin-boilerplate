@@ -5,7 +5,7 @@ import { BlueBaseApp, isMobile } from '@bluebase/core';
 import Apollo from '@bluebase/plugin-apollo';
 import BlueEastClientPluginUI from '@blueeast/client-plugin-ui';
 import MUIplugin from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { Noop } from '@bluebase/components';
 import { PlaceholderListItem } from '../../../imports';
 import Plugin from '../../../index';
@@ -26,10 +26,7 @@ describe('ShippingMethodPicker', () => {
 		const onValueChange = jest.fn();
 
 		const wrapper = mount(
-			<BlueBaseApp
-				plugins={[Plugin, MUIplugin, Apollo]}
-				components={{ GraphqlList: Noop }}
-			>
+			<BlueBaseApp plugins={[Plugin, MUIplugin, Apollo]} components={{ GraphqlList: Noop }}>
 				<MockedProvider mocks={ShippingMethodListQueryMocks.success()} addTypename={false}>
 					<ShippingMethodPicker title="BlueEast" avatar="source" onValueChange={onValueChange} />
 				</MockedProvider>
@@ -38,40 +35,19 @@ describe('ShippingMethodPicker', () => {
 
 		await waitForElement(wrapper, 'Dialog');
 
-		expect(
-			wrapper
-				.find('Dialog')
-				.first()
-				.prop('visible')
-		).toBe(false);
+		expect(wrapper.find('Dialog').first().prop('visible')).toBe(false);
 
-		expect(
-			wrapper
-				.find('ListItem')
-				.first()
-				.prop('description')
-		).toBe('BlueEast');
+		expect(wrapper.find('ListItem').first().prop('description')).toBe('BlueEast');
 
-		const openList: any = wrapper
-			.find('ListItem')
-			.first()
-			.prop('onPress');
+		const openList: any = wrapper.find('ListItem').first().prop('onPress');
 
 		openList();
 
 		await waitForElement(wrapper, 'ShippingMethodList');
 
-		expect(
-			wrapper
-				.find('Dialog')
-				.first()
-				.prop('visible')
-		).toBe(true);
+		expect(wrapper.find('Dialog').first().prop('visible')).toBe(true);
 
-		const updateShippingMethod: any = wrapper
-			.find('ShippingMethodList')
-			.first()
-			.prop('onPress');
+		const updateShippingMethod: any = wrapper.find('ShippingMethodList').first().prop('onPress');
 
 		wrapper.update();
 
@@ -87,10 +63,7 @@ describe('ShippingMethodPicker', () => {
 		const onValueChange = jest.fn();
 
 		const wrapper = mount(
-			<BlueBaseApp
-				plugins={[Plugin, MUIplugin, Apollo]}
-				components={{ GraphqlList: Noop }}
-			>
+			<BlueBaseApp plugins={[Plugin, MUIplugin, Apollo]} components={{ GraphqlList: Noop }}>
 				<MockedProvider mocks={ShippingMethodListQueryMocks.success()} addTypename={false}>
 					<ShippingMethodPicker title="BlueEast" avatar="source" />
 				</MockedProvider>
@@ -99,19 +72,13 @@ describe('ShippingMethodPicker', () => {
 
 		await waitForElement(wrapper, 'Dialog');
 
-		const openList: any = wrapper
-			.find('ListItem')
-			.first()
-			.prop('onPress');
+		const openList: any = wrapper.find('ListItem').first().prop('onPress');
 
 		openList();
 
 		await waitForElement(wrapper, 'ShippingMethodList');
 
-		const updateShippingMethod: any = wrapper
-			.find('ShippingMethodList')
-			.first()
-			.prop('onPress');
+		const updateShippingMethod: any = wrapper.find('ShippingMethodList').first().prop('onPress');
 
 		wrapper.update();
 

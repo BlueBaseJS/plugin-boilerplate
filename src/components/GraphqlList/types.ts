@@ -1,8 +1,8 @@
-import { FetchMoreOptions, SubscribeToMoreOptions } from 'apollo-client';
+import { FetchMoreOptions, SubscribeToMoreOptions } from '@apollo/client';
 import { FlatListProps, ListRenderItemInfo } from 'react-native';
 
 import { DocumentNode } from 'graphql';
-import { QueryHookOptions } from '@apollo/react-hooks';
+import { QueryHookOptions } from '@apollo/client';
 import { QueryResult } from '@apollo/react-common';
 import React from 'react';
 

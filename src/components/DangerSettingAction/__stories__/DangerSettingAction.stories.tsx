@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { networkError, success } from './mocks';
 
 import { FormikHelpers } from 'formik';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { getComponent } from '@bluebase/core';
 import gql from 'graphql-tag';
 import storiesOf from '@bluebase/storybook-addon';

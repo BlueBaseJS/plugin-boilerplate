@@ -7,7 +7,7 @@ import { Platform } from 'react-native';
 import get from 'lodash.get';
 import { useBlueBase } from '@bluebase/core';
 import { useImagePicker } from '../../hooks';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 
 const imagePickerOptions: ImagePickerOptions = {
 	allowsEditing: false,

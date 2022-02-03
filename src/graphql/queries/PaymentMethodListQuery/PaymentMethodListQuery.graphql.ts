@@ -1,4 +1,4 @@
-import { FetchMoreOptions } from 'apollo-client';
+import { FetchMoreOptions } from '@apollo/client';
 import get from 'lodash.get';
 import gql from 'graphql-tag';
 

@@ -4,7 +4,7 @@ import { BlueBaseApp } from '@bluebase/core';
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import BlueeastClientPluginUI from '@blueeast/client-plugin-ui';
 import MaterialUiPlugin from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { PaymentMethodList } from '../PaymentMethodList';
 import PaymentMethodListItem from '../../PaymentMethodListItem';
 import { PaymentMethodListQueryMocks } from '../../../graphql/mocks';
@@ -45,10 +45,7 @@ describe('PaymentMethodList', () => {
 
 		await waitForElement(wrapper, PaymentMethodList);
 
-		const handler: any = wrapper
-			.find(PaymentMethodListItem)
-			.first()
-			.prop('onPress');
+		const handler: any = wrapper.find(PaymentMethodListItem).first().prop('onPress');
 
 		handler();
 
@@ -58,7 +55,6 @@ describe('PaymentMethodList', () => {
 	});
 
 	describe('mapQueryResultToListData method', () => {
-
 		it('should return result data when networkState === 7', async () => {
 			// mount
 			const wrapper = mount(
@@ -89,7 +85,7 @@ describe('PaymentMethodList', () => {
 
 		describe('mapQueryResultToConnection method', () => {
 			it('should connection from result', async () => {
-			// mount
+				// mount
 				const wrapper = mount(
 					<GridTestWrapper>
 						<PaymentMethodList />

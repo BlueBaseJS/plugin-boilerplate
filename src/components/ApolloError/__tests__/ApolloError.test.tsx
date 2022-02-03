@@ -8,7 +8,7 @@ import { ErrorObserver, Redirect } from '@bluebase/components';
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import BlueBasePluginMaterialUI from '@bluebase/plugin-material-ui';
 import { HelloWorldQuery } from '../__stories__/Query';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import React from 'react';
 import { Text } from 'react-native';

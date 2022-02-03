@@ -1,6 +1,6 @@
 import { BlueBaseApp } from '@bluebase/core';
 import { MemoryRouter } from 'react-router';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import React from 'react';
 import { ShippingMethodList } from '../ShippingMethodList';
 import { ShippingMethodListQueryMocks } from '../../../graphql/mocks';

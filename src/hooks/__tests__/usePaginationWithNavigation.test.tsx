@@ -8,7 +8,7 @@ import {
 
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import BlueBasePluginMaterialUI from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../index';
 import { ProductGrid } from '../../components/GraphqlList/__artifacts__/ProductGrid';
 import { ProductListQueryMocks } from '../../components/GraphqlList/__artifacts__/mocks';

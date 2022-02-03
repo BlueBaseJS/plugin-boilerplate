@@ -1,5 +1,5 @@
 import { BlueBaseApp } from '@bluebase/core';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { ProductCarousel } from '../__artifacts__/ProductCarousel';
 import { ProductListQueryMocks } from '../../GraphqlList/__artifacts__/mocks';
 import React from 'react';

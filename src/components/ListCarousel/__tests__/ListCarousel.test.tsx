@@ -20,7 +20,7 @@ import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import { ListCarouselProps } from '../ListCarousel';
 import { ListCarouselToolbar } from '../ListCarouselToolbar';
 import MaterialUiPlugin from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import { ProductListQueryMocks } from '../../GraphqlList/__artifacts__/mocks';
 import ResponsiveListSizingPlugin from '@bluebase/plugin-responsive-grid';

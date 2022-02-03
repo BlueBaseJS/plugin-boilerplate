@@ -5,7 +5,7 @@ import { BlueBase, BlueBaseApp } from '@bluebase/core';
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import BlueBasePluginMaterialUI from '@bluebase/plugin-material-ui';
 import { FlatList } from '@bluebase/components';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import { ProductGrid } from '../__artifacts__/ProductGrid';
 import { ProductListQueryMocks } from '../__artifacts__/mocks';

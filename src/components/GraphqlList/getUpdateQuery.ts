@@ -1,4 +1,4 @@
-import { FetchMoreOptions } from 'apollo-client';
+import { FetchMoreOptions } from '@apollo/client';
 import { GraphqlListProps } from './types';
 
 /**

@@ -1,6 +1,6 @@
 import { getComponent, useConfig, useNavigation } from '@bluebase/core';
 
-import { ApolloError } from 'apollo-client';
+import { ApolloError } from '@apollo/client';
 import React from 'react';
 import { Redirect } from '@bluebase/components';
 import get from 'lodash.get';

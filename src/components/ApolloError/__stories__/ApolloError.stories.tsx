@@ -4,7 +4,7 @@ import { BlueBaseApp, getComponent } from '@bluebase/core';
 
 import { ErrorObserver } from '@bluebase/components';
 import { HelloWorldQuery } from './Query';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import React from 'react';
 import { Text } from 'react-native';
 import bootOptions from '../../../../boot';

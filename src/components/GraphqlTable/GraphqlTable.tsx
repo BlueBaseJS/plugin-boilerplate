@@ -1,9 +1,9 @@
 import { ErrorObserver, Table } from '@bluebase/components';
 import { GraphqlConnection, QueryVariables } from '../GraphqlList';
-import { QueryHookOptions, useQuery } from '@apollo/react-hooks';
+import { QueryHookOptions, useQuery } from '@apollo/client';
 
 import { DocumentNode } from 'graphql';
-import { FetchMoreOptions } from 'apollo-client';
+import { FetchMoreOptions } from '@apollo/client';
 import { QueryResult } from '@apollo/react-common';
 import React from 'react';
 import get from 'lodash.get';

@@ -11,7 +11,7 @@ import { getQueryVariables } from './getQueryVariables';
 import { isLoading } from './isLoading';
 import { keyExtractor } from './keyExtractor';
 import { loadMore } from './loadMore';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 
 export const GraphqlList = (props: GraphqlListProps) => {
 	const {

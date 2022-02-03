@@ -5,7 +5,7 @@ import { Dialog, List } from '@bluebase/components';
 
 import { BlueBaseApp } from '@bluebase/core';
 import { FormikContextType } from 'formik';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import React from 'react';
 import { mount } from 'enzyme';

@@ -4,7 +4,7 @@ import { BlueBaseApp } from '@bluebase/core';
 import BlueBasePluginApollo from '@bluebase/plugin-apollo';
 import BlueeastClientPluginUI from '@blueeast/client-plugin-ui';
 import MaterialUiPlugin from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import React from 'react';
 import ResponsiveListSizingPlugin from '@bluebase/plugin-responsive-grid';
@@ -44,10 +44,7 @@ describe('ShippingMethodList', () => {
 
 		await waitForElement(wrapper, 'ShippingMethodList');
 
-		const handler: any = wrapper
-			.find('ShippingMethodListItem')
-			.first()
-			.prop('onPress');
+		const handler: any = wrapper.find('ShippingMethodListItem').first().prop('onPress');
 
 		handler();
 
@@ -57,7 +54,6 @@ describe('ShippingMethodList', () => {
 	});
 
 	describe('mapQueryResultToListData method', () => {
-
 		it('should return result data when networkState === 7', async () => {
 			// mount
 			const wrapper = mount(
@@ -88,7 +84,7 @@ describe('ShippingMethodList', () => {
 
 		describe('mapQueryResultToConnection method', () => {
 			it('should connection from result', async () => {
-			// mount
+				// mount
 				const wrapper = mount(
 					<GridTestWrapper>
 						<ShippingMethodList />

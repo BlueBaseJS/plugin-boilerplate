@@ -5,7 +5,7 @@ import { BlueBaseApp, isMobile } from '@bluebase/core';
 import Apollo from '@bluebase/plugin-apollo';
 import BlueEastClientPluginUI from '@blueeast/client-plugin-ui';
 import MUIplugin from '@bluebase/plugin-material-ui';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { Noop } from '@bluebase/components';
 import { PaymentMethodListQueryMocks } from '../../../graphql/mocks';
 import { PaymentMethodPicker } from '../PaymentMethodPicker';
@@ -26,10 +26,7 @@ describe('PaymentMethodPicker', () => {
 		const onValueChange = jest.fn();
 
 		const wrapper = mount(
-			<BlueBaseApp
-				plugins={[Plugin, MUIplugin, Apollo]}
-				components={{ GraphqlList: Noop }}
-			>
+			<BlueBaseApp plugins={[Plugin, MUIplugin, Apollo]} components={{ GraphqlList: Noop }}>
 				<MockedProvider mocks={PaymentMethodListQueryMocks.success()} addTypename={false}>
 					<PaymentMethodPicker title="BlueEast" avatar="source" onValueChange={onValueChange} />
 				</MockedProvider>
@@ -38,40 +35,19 @@ describe('PaymentMethodPicker', () => {
 
 		await waitForElement(wrapper, 'Dialog');
 
-		expect(
-			wrapper
-				.find('Dialog')
-				.first()
-				.prop('visible')
-		).toBe(false);
+		expect(wrapper.find('Dialog').first().prop('visible')).toBe(false);
 
-		expect(
-			wrapper
-				.find('ListItem')
-				.first()
-				.prop('description')
-		).toBe('BlueEast');
+		expect(wrapper.find('ListItem').first().prop('description')).toBe('BlueEast');
 
-		const openList: any = wrapper
-			.find('ListItem')
-			.first()
-			.prop('onPress');
+		const openList: any = wrapper.find('ListItem').first().prop('onPress');
 
 		openList();
 
 		await waitForElement(wrapper, 'PaymentMethodList');
 
-		expect(
-			wrapper
-				.find('Dialog')
-				.first()
-				.prop('visible')
-		).toBe(true);
+		expect(wrapper.find('Dialog').first().prop('visible')).toBe(true);
 
-		const updatePaymentMethod: any = wrapper
-			.find('PaymentMethodList')
-			.first()
-			.prop('onPress');
+		const updatePaymentMethod: any = wrapper.find('PaymentMethodList').first().prop('onPress');
 
 		wrapper.update();
 
@@ -87,10 +63,7 @@ describe('PaymentMethodPicker', () => {
 		const onValueChange = jest.fn();
 
 		const wrapper = mount(
-			<BlueBaseApp
-				plugins={[Plugin, MUIplugin, Apollo]}
-				components={{ GraphqlList: Noop }}
-			>
+			<BlueBaseApp plugins={[Plugin, MUIplugin, Apollo]} components={{ GraphqlList: Noop }}>
 				<MockedProvider mocks={PaymentMethodListQueryMocks.success()} addTypename={false}>
 					<PaymentMethodPicker title="BlueEast" avatar="source" />
 				</MockedProvider>
@@ -99,19 +72,13 @@ describe('PaymentMethodPicker', () => {
 
 		await waitForElement(wrapper, 'Dialog');
 
-		const openList: any = wrapper
-			.find('ListItem')
-			.first()
-			.prop('onPress');
+		const openList: any = wrapper.find('ListItem').first().prop('onPress');
 
 		openList();
 
 		await waitForElement(wrapper, 'PaymentMethodList');
 
-		const updatePaymentMethod: any = wrapper
-			.find('PaymentMethodList')
-			.first()
-			.prop('onPress');
+		const updatePaymentMethod: any = wrapper.find('PaymentMethodList').first().prop('onPress');
 
 		wrapper.update();
 

@@ -2,7 +2,7 @@ import * as faker from '@faker-js/faker';
 
 import React, { useState } from 'react';
 
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { PaymentMethodListQueryMocks } from '../../../graphql/mocks';
 import { PaymentMethodPicker } from '../PaymentMethodPicker';
 import storiesOf from '@bluebase/storybook-addon';

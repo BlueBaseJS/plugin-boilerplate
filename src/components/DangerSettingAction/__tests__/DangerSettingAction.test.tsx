@@ -5,7 +5,7 @@ import { DeletePlaceMutation, success } from '../__stories__/mocks';
 import { Dialog, List } from '@bluebase/components';
 
 import { FormikContextType } from 'formik';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import Plugin from '../../../index';
 import React from 'react';
 import { mount } from 'enzyme';
@@ -81,10 +81,7 @@ describe('DangerSettingActions', () => {
 			</BlueBaseApp>
 		);
 		await waitForElement(wrapper, DangerSettingAction);
-		const node = wrapper
-			.find('DangerSettingAction')
-			.last()
-			.instance() as any;
+		const node = wrapper.find('DangerSettingAction').last().instance() as any;
 		node.onSuccess();
 
 		expect(wrapper.find('ListItem').exists()).toBe(true);
@@ -114,33 +111,13 @@ describe('DangerSettingActions', () => {
 			</BlueBaseApp>
 		);
 		await waitForElement(wrapper, DangerSettingAction);
-		wrapper
-			.find('DangerSettingAction')
-			.find(List.Item)
-			.first()
-			.props()
-			.onPress();
+		wrapper.find('DangerSettingAction').find(List.Item).first().props().onPress();
 
-		expect(
-			wrapper
-				.find('DangerSettingAction')
-				.last()
-				.state(['dialogVisible'])
-		).toBe(true);
+		expect(wrapper.find('DangerSettingAction').last().state(['dialogVisible'])).toBe(true);
 
-		wrapper
-			.find('DangerSettingAction')
-			.find(Dialog)
-			.first()
-			.props()
-			.onDismiss();
+		wrapper.find('DangerSettingAction').find(Dialog).first().props().onDismiss();
 
-		expect(
-			wrapper
-				.find('DangerSettingAction')
-				.last()
-				.state(['dialogVisible'])
-		).toBe(false);
+		expect(wrapper.find('DangerSettingAction').last().state(['dialogVisible'])).toBe(false);
 
 		wrapper.unmount();
 	});
@@ -170,10 +147,7 @@ describe('DangerSettingActions', () => {
 		await waitForElement(wrapper, DangerSettingAction);
 
 		// Find component instance
-		const instance: any = wrapper
-			.find('DangerSettingAction')
-			.last()
-			.instance();
+		const instance: any = wrapper.find('DangerSettingAction').last().instance();
 
 		// Open dialog
 		instance.openDialog();
@@ -190,34 +164,19 @@ describe('DangerSettingActions', () => {
 		formik.setFieldValue('code', '12');
 		wrapper.update();
 
-		expect(
-			wrapper
-				.find('Button[name="submit"]')
-				.last()
-				.prop('disabled')
-		).toBe(true);
+		expect(wrapper.find('Button[name="submit"]').last().prop('disabled')).toBe(true);
 
 		// Input correct code to see if the button is NOT disabled
 		formik.setFieldValue('code', '123');
 		wrapper.update();
 
-		expect(
-			wrapper
-				.find('Button[name="submit"]')
-				.last()
-				.prop('disabled')
-		).toBe(true);
+		expect(wrapper.find('Button[name="submit"]').last().prop('disabled')).toBe(true);
 
 		// Submit form to see if the button is disabled again
 		formik.handleSubmit();
 		wrapper.update();
 
-		expect(
-			wrapper
-				.find('Button[name="submit"]')
-				.last()
-				.prop('disabled')
-		).toBe(true);
+		expect(wrapper.find('Button[name="submit"]').last().prop('disabled')).toBe(true);
 
 		wrapper.unmount();
 	});
@@ -239,10 +198,7 @@ describe('DangerSettingActions', () => {
 		await waitForElement(wrapper, DangerSettingAction);
 
 		// Find component instance
-		const instance: any = wrapper
-			.find('DangerSettingAction')
-			.last()
-			.instance();
+		const instance: any = wrapper.find('DangerSettingAction').last().instance();
 
 		// Open dialog
 		const result = instance.mapFormValuesToMutationVariables({

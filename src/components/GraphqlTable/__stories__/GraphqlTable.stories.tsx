@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { BlueBaseApp } from '@bluebase/core';
 import { MemoryRouter } from 'react-router';
-import { MockedProvider } from '@apollo/react-testing';
+import { MockedProvider } from '@apollo/client/testing';
 import { ProductListQueryMocks } from '../../GraphqlList/__artifacts__/mocks';
 import { ProductTable } from '../__artifacts__/ProductTable';
 import bootOptions from '../../../../boot';
