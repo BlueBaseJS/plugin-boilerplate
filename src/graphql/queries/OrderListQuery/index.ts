@@ -1,1 +1,0 @@
-export * from './OrderListQuery.graphql';

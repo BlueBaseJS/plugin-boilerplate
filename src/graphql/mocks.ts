@@ -1,1 +1,1 @@
-export * from './queries/mocks';
+export * from './mutations/mocks';

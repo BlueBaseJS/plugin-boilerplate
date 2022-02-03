@@ -1,2 +1,2 @@
-export * from './lists';
-export * from './utilities';
+export * from './noop';
+export * from './resolveComponent';
