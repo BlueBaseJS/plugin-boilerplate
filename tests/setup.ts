@@ -56,3 +56,6 @@ console.error = (message: any) => {
 
 	originalConsoleError(message);
 };
+
+// Mocks
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');

@@ -3,6 +3,7 @@ const configs = require('@bluebase/code-standards/jest.config');
 const modules = [
 	'@unimodules/.*',
 	'@react-native/.*',
+	'@react-native-community/.*',
 	'expo',
 	'react-native',
 	'react-router-native',
