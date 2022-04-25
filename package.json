@@ -53,7 +53,7 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.12.9",
-    "@bluebase/code-standards": "^2.20.0",
+    "@bluebase/code-standards": "^2.20.1",
     "@bluebase/core": "^7.0.0",
     "@bluebase/plugin-json-schema-components": "^4.0.1",
     "@bluebase/plugin-launcher": "^2.0.2",
